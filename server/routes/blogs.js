@@ -1,11 +1,9 @@
 const express=require("express")
-const Blogs=require("../models/Blog")
 const Router=express.Router()
+const Blog=require("../models/Blog")
 Router.get('/fetchblogs' , async (req, res) => {
    try {
-        console.log("fetching data");
-         const blogs = await Blogs.find({});
-         res.json(blogs)
+    Blog.find({});
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Internal Server Error in Blogs.find");
