@@ -9,12 +9,13 @@ import BlogSection from "./Components/BlogSection.jsx";
 import Footer from "./Components/Footer.jsx";
 import ErrorPage from "./Components/ErrorPage.jsx";
 import AdminPage from "./Components/AdminPage.jsx";
+import AdminLoginPage from "./Components/AdminLoginPage.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
   const [blogs, setBlogs] = useState([]);
   const fetchData = () => {
-    const url = "http://localhost:5000/api/blogs/fetchblogs";
+    const url = "../BlogData.json";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setBlogs(data.data));
@@ -51,7 +52,8 @@ export default function App() {
                 />
               );
             })}
-            <Route exact path="admin" element={<AdminPage />} />
+            <Route exact path="admin" element={<AdminLoginPage />} />
+            <Route exact path="adminpage" element={<AdminPage />} />
             <Route exact path="*" element={<ErrorPage />} />
           </Routes>
           <Footer />

@@ -294,7 +294,7 @@ min-height:85vh;
   color:crimson;
   text-decoration:none;
 }
-.AdminPage{
+.AdminLoginPage{
   display:flex;
   gap:20px;
   width:80vw;
@@ -304,20 +304,20 @@ min-height:85vh;
   flex-direction:column;
   font-family: 'Roboto',sans-serif;
 }
-.AdminPage h2{
+.AdminLoginPage h2{
   color:#e81469;
   font-size:3rem;
   font-weight:bold;
   text-align:justify;
 }
-.AdminPage form{
+.AdminLoginPage form{
   display:flex;
   gap:10px;
   justify-content:center;
   align-items:center;
   flex-direction:column;
 }
-.AdminPage form .inputField{
+.AdminLoginPage form .inputField{
   width:100%;
   background:#272a2b;
   color:white;
@@ -329,7 +329,7 @@ min-height:85vh;
   padding:10px;
   outline:none;
 }
-.AdminPage form .LoginButton{
+.AdminLoginPage form .LoginButton{
   background:#e81469;
   border-radius:8px;
   width:60%;
@@ -340,6 +340,28 @@ min-height:85vh;
   color:white;
   font-weight:bold;
 }
+.AdminPage{
+min-height:100vh;
+background-color: #04011a;
+}
+.AdminPage .adminheader{
+  display: flex;
+  padding: 10px;
+  background-color: #000000;
+
+}
+  .AdminPage .adminheader .admintitle{
+    display: flex;
+  }
+
+.AdminPage .adminheader .admintitle .adminphoto{
+  height: 80px;
+  border: 2px solid beige;
+  border-radius: 50%;
+
+}
+
+
 @media (max-width: ${({ theme }) => theme.responsive.mobile}) {
   .Header{
     flex-direction:column;
@@ -431,10 +453,10 @@ min-height:85vh;
     font-size:1.2rem;
 }
 
-  .AdminPage h2{
+  .AdminLoginPage h2{
     font-size:1.4rem;
   }
-  .AdminPage form .LoginButton,.AdminPage form .inputField{
+  .AdminLoginPage form .LoginButton,.AdminLoginPage form .inputField{
     height:auto;
     font-size:1.2rem;
 }

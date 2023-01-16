@@ -1,24 +1,18 @@
-export default function AdminPage(props) {
+import React from 'react'
+import {AiOutlinePlus}from "react-icons/ai"
+export default function AdminPage() {
   return (
     <section className="AdminPage">
-      <h2>Enter your information below to login as admin .</h2>
-      <form method="POST" action="/api/auth/adminlogin">
-        <input
-          className="inputField"
-          type="email"
-          placeholder="Enter your email"
-          required
-        />
-        <input
-          className="inputField"
-          type="password"
-          placeholder="Enter your password"
-          required
-        />
-        <button type="submit" className="LoginButton">
-          Log In
-        </button>
-      </form>
+        <header className="adminheader">
+            <div className="admintitle">
+                <h3 className="admingreet">Welcome</h3>
+                <img src="https://sajagsubedi.netlify.app/img/img.jpg" alt="img" className="adminphoto" />
+                <h2>Sajag Subedi</h2>
+            </div>
+            <div className="modifydiv">
+            <AiOutlinePlus/>
+            </div>
+        </header>
     </section>
-  );
+  )
 }

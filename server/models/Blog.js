@@ -2,27 +2,21 @@ const mongoose=require("mongoose")
 const Schema = mongoose.Schema;
 
 const BlogsSchema = new Schema({
-    Title:{
+    title:{
         type: String,
         required: true
     },
-    SubTitle:{
-        type:String
-    },
-    Description:{
+    subTitle:String,
+    description:{
         type: String,
         required: true, 
     },
-    imgUrl:{
-        type: String,
-    },
+    imgUrl:String,
     publishedAt:{
         type: Date,
         default: Date.now
     },
-    urlToBlog:{
-        type:String,
-    }
+    urlToBlog:String
   });
 
   module.exports= mongoose. model('Blog', BlogsSchema);
