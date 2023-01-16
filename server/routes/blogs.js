@@ -9,15 +9,15 @@ router.get("/fetchblogs", async (req, res) => {
  });
 
 // adding a blog
-// router.post('/addblog',(req,res)=>{
-//   console.log(req.body)
-//  if( !Blog.find(req.body)==null){
-//   let newPost=new Blog(req.body)
-//   newPost.save()
-//   res.end("Blog added succesfully")
-//  }
-//  else{
-//   res.end(Blog.find(req.body))
-//  }
-// })
+router.post('/addblog',(req,res)=>{
+  console.log(req.body)
+ if( !Blog.find(req.body)==null){
+  let newPost=new Blog(req.body)
+  newPost.save()
+  res.end("Blog added succesfully")
+ }
+ else{
+  res.end(Blog.find(req.body))
+ }
+})
 module.exports = router;
